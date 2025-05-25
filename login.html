@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PlayStation Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background-color: #003087;
+      color: white;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar ul li a.active, .navbar ul li a:hover {
+      color: #1a5be0;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #003087;
+      margin-bottom: 20px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 15px;
+      margin: 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 15px;
+      background-color: #003087;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #1a5be0;
+    }
+
+    .form-container .register-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #003087;
+      text-decoration: none;
+    }
+
+    .form-container .register-link:hover {
+      color: #1a5be0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #003087;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">PlayStation Store</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <input type="email" name="email" id="email" placeholder="Email" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="register.html" class="register-link">Don't have an account? Register here</a>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 PlayStation Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault(); 
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const savedUser = JSON.parse(localStorage.getItem("user"));
+
+      if (savedUser && savedUser.email === email && savedUser.password === password) {
+        alert("Login successful!");
+        window.location.href = "shop.html"; 
+      } else {
+        alert("Incorrect email or password. Please try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>

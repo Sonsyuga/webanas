@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - PlayStation Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background-color: #003087;
+      color: white;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar ul li a.active, .navbar ul li a:hover {
+      color: #1a5be0;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 900px; 
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #003087;
+      margin-bottom: 20px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #003087;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #1a5be0;
+    }
+
+    .form-container .login-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #003087;
+      text-decoration: none;
+    }
+
+    .form-container .login-link:hover {
+      color: #1a5be0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #003087;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">PlayStation Store</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="register-form">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <a href="login.html" class="login-link">Already have an account? Login here</a>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 PlayStation Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const username = event.target.username.value;
+      const email = event.target.email.value;
+      const password = event.target.password.value;
+      const confirmPassword = event.target.confirm_password.value;
+
+      if (password !== confirmPassword) {
+        alert("Password dan Konfirmasi Password tidak cocok.");
+        return;
+      }
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+
+      alert("Registrasi berhasil! Silakan login.");
+      window.location.href = 'login.html'; 
+    });
+  </script>
+
+</body>
+</html>

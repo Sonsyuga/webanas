@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - PlayStation Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset and Body Styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f7;
+      overflow-x: hidden;
+    }
+
+    /* Header Styling */
+    .header {
+      background-color: #003087;
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      padding-left: 20px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-right: 20px;
+    }
+
+    .navbar li a {
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      background-color: #1a5be0;
+    }
+
+    .navbar li a.active {
+      background-color: #0062cc;
+    }
+
+    /* About Section */
+    .about-section {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 1000px;
+    }
+
+    .about-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #003087;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-section .team-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .about-section .mission {
+      text-align: left;
+      margin-top: 40px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .about-section .mission h3 {
+      font-size: 28px;
+      color: #003087;
+      margin-bottom: 15px;
+    }
+
+    .about-section .timeline {
+      margin-top: 40px;
+    }
+
+    .about-section .timeline h3 {
+      font-size: 28px;
+      color: #003087;
+      margin-bottom: 10px;
+    }
+
+    .about-section .timeline ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-section .timeline li {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 5px solid #003087;
+    }
+
+    .footer {
+      background-color: #003087;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">PlayStation Store</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>About Us</h2>
+    <p>PlayStation Store Indonesia adalah toko online terpercaya yang menyediakan konsol, game, dan aksesori PlayStation terbaru. Kami berdedikasi untuk memberikan pengalaman belanja terbaik bagi para gamer di seluruh Indonesia.</p>
+    <p>Didirikan pada tahun 2020, kami telah melayani ribuan pelanggan dengan produk asli dan layanan pelanggan profesional. Kami percaya bahwa bermain game adalah bagian penting dari hiburan modern, dan kami hadir untuk mendukung komunitas gamer Indonesia.</p>
+
+    <img src="your-image-url-here.jpg" alt="PlayStation Team" class="team-image">
+
+    <div class="mission">
+      <h3>Our Mission</h3>
+      <p>Our mission is to deliver premium PlayStation products with the best customer service, ensuring that gamers in Indonesia have access to the best gaming experience.</p>
+    </div>
+
+    <div class="timeline">
+      <h3>Our Journey</h3>
+      <ul>
+        <li><strong>2020:</strong> PlayStation Store Indonesia is launched.</li>
+        <li><strong>2021:</strong> First milestone reached: 100,000 customers served.</li>
+        <li><strong>2022:</strong> Expanded product range to include accessories and exclusive games.</li>
+        <li><strong>2023:</strong> Reached over 500,000 customers nationwide.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 PlayStation Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

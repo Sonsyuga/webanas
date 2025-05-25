@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - PlayStation Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #003087;
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      padding-left: 20px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-right: 20px;
+    }
+
+    .navbar li a {
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      background-color: #1a5be0;
+    }
+
+    .navbar li a.active {
+      background-color: #0062cc;
+    }
+
+    .products {
+      padding: 40px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #003087; 
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1200px;
+      overflow-y: auto;
+      max-height: 100vh; 
+    }
+
+  .product-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 24px;
+      color: #003087;
+      margin: 10px 0;
+    }
+
+    .product-card p {
+      font-size: 18px;
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .product-card .btn {
+      background-color: #003087;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card .btn:hover {
+      background-color: #1a5be0;
+    }
+
+    .footer {
+      background-color: #003087;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">PlayStation Store</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Shop Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="ps1.jpeg" alt="PlayStation 5">
+        <h3>PlayStation 1</h3>
+        <p>Rp 350.000 </p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="ps2.jpeg" alt="DualShock Controller">
+        <h3>PlayStation 2</h3>
+        <p>Rp 500.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="ps3.jpeg" alt="Game PS5">
+        <h3>PlayStation 3</h3>
+        <p>Rp 1.000.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="ps4.jpeg" alt="PlayStation 5">
+        <h3>PlayStation 4</h3>
+        <p>Rp 2.500.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="ps5.jpeg" alt="DualShock Controller">
+        <h3>PlayStation 5</h3>
+        <p>Rp 8.199.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="cps1.jpeg" alt="Game PS5">
+        <h3>Controller PlayStation 1 </h3>
+        <p>Rp 50.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="cps2.jpeg" alt="PlayStation 5">
+        <h3>Controller PlayStation 2</h3>
+        <p>Rp 70.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="cps3.jpeg" alt="DualShock Controller">
+        <h3>Controller PlayStation 3</h3>
+        <p>Rp 85.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="cps4.jpeg" alt="Game PS5">
+        <h3>Controller PlayStation 4</h3>
+        <p>Rp 129.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="gps1.jpeg" alt="PlayStation 5">
+        <h3>Game PlayStation 1</h3>
+        <p>Rp 1.500.000</p>
+        <button class="add-to-cart btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 PlayStation Store. All rights reserved.</p>
+  </footer>
+
+ <script>
+  function addToCart(productName, productPrice) {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const cartItem = { name: productName, price: productPrice };
+
+    cart.push(cartItem);
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} has been added to your cart!`);
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const productCards = document.querySelectorAll('.product-card');
+      const productName = productCards[index].querySelector('h3').textContent;
+
+      const rawPrice = productCards[index].querySelector('p').textContent;
+      const cleanedPrice = rawPrice.replace('Rp', '').replace(/\./g, '').replace(/\s+/g, '');
+      const productPrice = parseInt(cleanedPrice);
+
+      addToCart(productName, productPrice);
+    });
+  });
+</script>
